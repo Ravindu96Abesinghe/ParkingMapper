@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "85315219337",
+    "project_id": "parking-mapper",
+    "storage_bucket": "parking-mapper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85315219337:android:2994355ef00fc37514fb58",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85315219337-90f2786793egg0aa1nv86lp31kcjgpla.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcTjJFnW8IZRsoKKEUSZxgk5w_dfDEXrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85315219337-90f2786793egg0aa1nv86lp31kcjgpla.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

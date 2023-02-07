@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:weightSum="6"
+    tools:context=".MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="11">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/parking_img"
+        android:layout_height="match_parent">
+
+
+    </ImageView>
+
+</LinearLayout>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtUsername"
+    android:hint="E-mail"
+    android:layout_marginTop="20dp"
+    android:maxLines="1"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp">
+
+</EditText>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtPassword"
+    android:hint="Password"
+    android:inputType="textPassword"
+    android:maxLines="1"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:paddingLeft="20dp"
+    android:paddingEnd="0dp">
+
+</EditText>
+
+<androidx.appcompat.widget.AppCompatButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnLogin"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:text="LOGIN"
+    android:background="@drawable/custom_button"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="40dp">
+
+</androidx.appcompat.widget.AppCompatButton>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCreateAccount"
+        android:layout_marginStart="5dp"
+        android:text="Register Now"
+        android:textColor="@color/btnLogin"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+</LinearLayout>
+
+<!--<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="userLogin"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:background="#0000FF"
+        android:isScrollContainer="true">
+
+    </Button>-->
+
+<!--<Button
+            android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/btnfroget"
+                    android:layout_marginTop="50dp"
+                    android:layout_toLeftOf="@+id/btnCreateAccount"
+                    android:text="Froget Password?"
+                    android:textColor="#0000FF">
+
+</Button>-->
+
+<!--<Button
+    android:id="@+id/btnCreateAccount"
+    android:layout_width="200dp"
+    android:layout_height="50dp"
+    android:onClick="createUser"
+    android:text="CREATE ACCOUNT"
+    android:layout_below="@+id/btnLogin"
+    android:isScrollContainer="true"
+    android:textColor="#0000ff"
+    android:layout_centerInParent="true">
+
+</Button>
+
+</RelativeLayout>-->
+
+<!--<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtUsername"
+    android:hint="User Name"
+    >
+
+</EditText>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:id="@+id/txtPassword"
+    android:hint="Password">
+
+</EditText>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="userLogin"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:background="#0000FF"
+        android:isScrollContainer="true">
+
+    </Button>
+
+</RelativeLayout>-->
+
+
+</LinearLayout>
