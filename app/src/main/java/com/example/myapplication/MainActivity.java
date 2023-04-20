@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://parking-mapper-default-rtdb.firebaseio.com/");
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://parkingmapper-680fd-default-rtdb.firebaseio.com");
 
 
 
@@ -45,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (usernametxt.isEmpty() || passwordtxt.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please enter your user name or password", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                } else {
                     databaseReference.child("User").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -60,72 +60,67 @@ public class MainActivity extends AppCompatActivity {
                                 String getPassword = snapshot.child(usernametxt).child("password")
                                         .getValue(String.class);
 
-//                                String getUserType = snapshot.child(usernametxt).child("userType")
-//                                        .getValue(String.class);
+                                String getUserType = snapshot.child(usernametxt).child("type")
+                                        .getValue(String.class);
 
 
-//                                if (getPassword.equals(passwordtxt) && getUserType.equals("admin")) {
+                                if (getPassword.equals(passwordtxt) && getUserType.equals("vehicle")) {
 //
 //
-////                                    if (getUserType == "admin") {
-//
-//                                    Toast.makeText(MainActivity.this, "Successfully Logged in Admin", Toast.LENGTH_SHORT).show();
+//                                    if (getUserType == "vehicle") {
+
+                                    Toast.makeText(MainActivity.this, "Successfully Logged in Vehicle Owner", Toast.LENGTH_SHORT).show();
 
 
                                     // open mainmanu on success
-//                                    startActivity(new Intent(MainActivity.this, OrderTracking.class));
-//                                    finish();
-//                                } else
-                                if (getPassword.equals(passwordtxt) /*&& getUserType.equals("user")*/) {
+                                    startActivity(new Intent(MainActivity.this, UserMenu.class));
+                                    finish();
+                                } else if (getPassword.equals(passwordtxt) && getUserType.equals("parking")) {
 
-                                Toast.makeText(MainActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this, "Successfully Logged in Parking Owner", Toast.LENGTH_SHORT).show();
 
-                                // Connect to Main manu
-                                startActivity(new Intent(MainActivity.this, UserMenu.class));
-                                finish();
+                                    // Connect to Main manu
+                                    startActivity(new Intent(MainActivity.this, ParkingMenu.class));
+                                    finish();
                                 } else {
                                     Toast.makeText(MainActivity.this, "Wrong Password", Toast.LENGTH_SHORT).show();
                                 }
 
-                                if (Boolean.parseBoolean(usernametxt))
-
-                                    if (getPassword.equals(passwordtxt)) {
-                                        Toast.makeText(MainActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
-
-                                        startActivity(new Intent(MainActivity.this, CreateLogin.class));
-                                        finish();
-
-                                    } else {
-                                        Toast.makeText(MainActivity.this, "Wrong Password", Toast.LENGTH_SHORT).show();
-                                    }
-                            }
-                            else{
+//                                if (Boolean.parseBoolean(usernametxt))
+//
+//                                    if (getPassword.equals(passwordtxt)) {
+//                                        Toast.makeText(MainActivity.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
+//
+//                                        startActivity(new Intent(MainActivity.this, CreateLogin.class));
+//                                        finish();
+//
+//                                    } else {
+//                                        Toast.makeText(MainActivity.this, "Wrong Password", Toast.LENGTH_SHORT).show();
+//                                    }
+                            } else {
                                 Toast.makeText(MainActivity.this, "Wrong Username", Toast.LENGTH_SHORT).show();
+                            }
                         }
-
-
-
-                        }
-
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 
                         }
                     });
-
                 }
-            }
-        });
 
 
-        txtCreateAcc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                txtCreateAcc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                // open register activity
-                startActivity(new Intent(MainActivity.this, CreateLogin.class));
+                        // open register activity
+                        startActivity(new Intent(MainActivity.this, CreateLogin.class));
+                    }
+                });
             }
         });
     }
 }
+
+

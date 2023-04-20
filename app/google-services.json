@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "85315219337",
-    "project_id": "parking-mapper",
-    "storage_bucket": "parking-mapper.appspot.com"
+    "project_number": "1075607118958",
+    "project_id": "parkingmapper-680fd",
+    "storage_bucket": "parkingmapper-680fd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:85315219337:android:2994355ef00fc37514fb58",
+        "mobilesdk_app_id": "1:1075607118958:android:77d5de1750e1147eccf27f",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "85315219337-90f2786793egg0aa1nv86lp31kcjgpla.apps.googleusercontent.com",
+          "client_id": "1075607118958-9qjgt8h0iet30k7rk1eicm288aoinfi4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "c4e99029010315567a9c808131d4d0ac738d6cde"
+          }
+        },
+        {
+          "client_id": "1075607118958-8oc4okmqu9mq9okledgketssd9m1u86f.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCcTjJFnW8IZRsoKKEUSZxgk5w_dfDEXrY"
+          "current_key": "AIzaSyDKP1xNnx8ispSUCSlrSS5wwKb9lpKIogE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "85315219337-90f2786793egg0aa1nv86lp31kcjgpla.apps.googleusercontent.com",
+              "client_id": "1075607118958-8oc4okmqu9mq9okledgketssd9m1u86f.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

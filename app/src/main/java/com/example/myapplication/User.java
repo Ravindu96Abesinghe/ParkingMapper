@@ -28,11 +28,11 @@ public class User {
         Password = password;
     }
 
-//    public String getUserType() {
-//        return UserType;
-//    }
-//
-//    public void setUserType(String userType) {
-//        UserType = UserType;
-//    }
+    public String getUserType() {
+        return UserType;
+    }
+
+    public void setUserType(String userType) {
+        UserType = UserType;
+    }
 }
