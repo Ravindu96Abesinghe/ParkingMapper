@@ -81,12 +81,12 @@
         <RadioButton android:id="@+id/radio_vehicle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_drive_eta_24"
+            android:drawableLeft="@drawable/ic_baseline_my_vehicle"
             />
         <RadioButton android:id="@+id/radio_parking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_baseline_local_parking_24"
+            android:drawableLeft="@drawable/ic_baseline_my_parking"
             />
     </RadioGroup>
 
