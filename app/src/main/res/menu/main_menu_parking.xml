@@ -4,15 +4,50 @@
     <group
         android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/nav_park"
-            android:title="Parking"
-            android:icon="@drawable/ic_baseline_my_parking"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_park"-->
+<!--            android:title="Parking"-->
+<!--            android:icon="@drawable/ic_baseline_my_parking"/>-->
 
         <item
             android:id="@+id/nav_acc"
             android:title="My Accounts"
             android:icon="@drawable/ic_baseline_accounts_settings"/>
+
+        <item
+            android:id="@+id/nav_fav"
+            android:title="Favorites"
+            android:icon="@drawable/ic_baseline_favorite"/>
+
+        <item
+            android:id="@+id/nav_pay"
+            android:title="Payments"
+            android:icon="@drawable/ic_baseline_payments"/>
+
+        <item
+            android:id="@+id/nav_about"
+            android:title="About"
+            android:icon="@drawable/ic_baseline_about"/>
+
+    </group>
+
+    <group
+        android:checkableBehavior="single">
+        <item android:title="Authenticate">
+
+            <menu>
+
+                <group>
+                    <item
+                        android:id="@+id/nav_logout"
+                        android:title="Log Out"
+                        android:icon="@drawable/ic_baseline_signout"/>
+                </group>
+
+
+            </menu>
+
+        </item>
 
     </group>
 

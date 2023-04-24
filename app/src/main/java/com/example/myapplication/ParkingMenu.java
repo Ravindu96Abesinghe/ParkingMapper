@@ -1,11 +1,13 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBar.*;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -21,10 +23,10 @@ import com.google.android.material.navigation.NavigationView;
 
 public class ParkingMenu extends AppCompatActivity {
 
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
-    ActionBarDrawerToggle actionBarDrawerToggle;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private Toolbar toolbar;
+//    ActionBarDrawerToggle actionBarDrawerToggle;
 //    LinearLayout parking, settings;
 
 //    @Override
@@ -42,9 +44,76 @@ public class ParkingMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking_menu);
 
-//        drawerLayout = findViewById(R.id.drawerLayout);
-////        menu = findViewById(R.id.menu);
-//        navigationView = findViewById(R.id.navigationView);
+        drawerLayout = findViewById(R.id.drawerLayout);
+//        menu = findViewById(R.id.menu);
+        navigationView = findViewById(R.id.navigationView);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setDisplayHomeAsUpEnabled(true);
+//        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu);
+
+//        navigationView.setNavigationItemSelectedListener((MenuItem::hasSubMenu));
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()) {
+//                    case R.id.nav_park:
+//                        startActivity(new Intent(ParkingMenu.this, ParkingMenu.class));
+//                        Toast.makeText(ParkingMenu.this, "Parking Clicked", Toast.LENGTH_SHORT).show();
+//                        return true;
+
+                    case R.id.nav_acc:
+                        startActivity(new Intent(ParkingMenu.this, AccountsParking.class));
+                        Toast.makeText(ParkingMenu.this, "A Clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+
+                    case R.id.nav_fav:
+                        startActivity(new Intent(ParkingMenu.this, ParkingMenu.class));
+                        Toast.makeText(ParkingMenu.this, "Fav Clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+
+                    case R.id.nav_pay:
+                        startActivity(new Intent(ParkingMenu.this, AccountsParking.class));
+                        Toast.makeText(ParkingMenu.this, "Pay Clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+
+//                    case R.id.nav_fav:
+//                        startActivity(new Intent(ParkingMenu.this, ParkingMenu.class));
+////                        startActivity(new Intent(ParkingMenu.this, CreateLogin.class));
+//                        Toast.makeText(ParkingMenu.this, "F Clicked", Toast.LENGTH_SHORT).show();
+//                        return true;
+//
+//                    case R.id.nav_pay:
+//                        startActivity(new Intent(ParkingMenu.this, ParkingMenu.class));
+//                        Toast.makeText(ParkingMenu.this, "p Clicked", Toast.LENGTH_SHORT).show();
+//                        return true;
+//
+                    case R.id.nav_about:
+                        startActivity(new Intent(ParkingMenu.this, ParkingMenu.class));
+                        Toast.makeText(ParkingMenu.this, "About Clicked", Toast.LENGTH_SHORT).show();
+                        return true;
+                }
+                return true;
+            }
+        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_pay:
+                Toast.makeText(ParkingMenu.this, "Parking Clicked", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
 //        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.menu_open, R.string.menu_close);
 //        drawerLayout.addDrawerListener(actionBarDrawerToggle);
 //        actionBarDrawerToggle.syncState();
@@ -55,23 +124,26 @@ public class ParkingMenu extends AppCompatActivity {
 //
 //                switch (item.getItemId()) {
 //                    case R.id.nav_park:
-//                        Log.i("Menu_Drawer_Tag", "Parking is clicked");
+////                        Log.i("Menu_Drawer_Tag", "Parking is clicked");
+//                        startActivity(new Intent(ParkingMenu.this, ParkingMenu.class));
 //                        drawerLayout.closeDrawer(GravityCompat.START);
 //                        break;
-//
+////
 //                    case R.id.nav_acc:
-//                        Log.i("Menu_Drawer_Tag", "Account is clicked");
+////                        Log.i("Menu_Drawer_Tag", "Account is clicked");
+//                        startActivity(new Intent(ParkingMenu.this, UserMenu.class));
 //                        drawerLayout.closeDrawer(GravityCompat.START);
 //                        break;
-//
+////
 //                }
 //
 //                return true;
 //            }
 //        });
-
-
-    }
+//
+//
+//    }
+//}
 
 
 //        parking = findViewById(R.id.parking);
@@ -98,28 +170,28 @@ public class ParkingMenu extends AppCompatActivity {
 //
 //    }
 
-    public static void openDrawer(DrawerLayout drawerLayout) {
-        drawerLayout.openDrawer(GravityCompat.START);
-    }
-
-    public static void closeDrawer(DrawerLayout drawerLayout) {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
-    }
-
-    public static void redirectActivity(Activity activity, Class secondActivity) {
-        Intent intent = new Intent(activity, secondActivity);
-        activity.startActivity(intent);
-        activity.finish();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        closeDrawer(drawerLayout);
-    }
-}
+//    public static void openDrawer(DrawerLayout drawerLayout) {
+//        drawerLayout.openDrawer(GravityCompat.START);
+//    }
+//
+//    public static void closeDrawer(DrawerLayout drawerLayout) {
+//        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+//            drawerLayout.closeDrawer(GravityCompat.START);
+//        }
+//    }
+//
+//    public static void redirectActivity(Activity activity, Class secondActivity) {
+//        Intent intent = new Intent(activity, secondActivity);
+//        activity.startActivity(intent);
+//        activity.finish();
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        closeDrawer(drawerLayout);
+//    }
+//}
 
     //
 //        Toolbar toolbar = findViewById(R.id.toolbar);
