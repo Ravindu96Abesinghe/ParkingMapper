@@ -1,126 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
+    android:weightSum="6"
+    android:orientation="vertical"
     tools:context=".ParkingMenu">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="280dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/parking_img">
-
-            </ImageView>
-
-        </LinearLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/navigationView"
-        app:headerLayout="@layout/header_menu"
-        app:menu="@menu/main_menu_parking"
-        android:fitsSystemWindows="true"
-        android:layout_gravity="start">
-
-    </com.google.android.material.navigation.NavigationView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="280dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_weight="7">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@id/txtUsername"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="0dp"
-                android:text="View Reservation">
-
-            </EditText>
-
-            <ImageView
-                android:layout_width="50dp"
-                android:src="@drawable/ic_search"
-                android:layout_marginStart="320dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="2dp"
-                android:layout_height="50dp">
-
-            </ImageView>
-
-        </RelativeLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnCLocation"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:text="Search Reservation"
-            android:background="@drawable/custom_button"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="50dp">
+            android:src="@drawable/parking_img"
+            android:layout_height="match_parent">
 
-        </androidx.appcompat.widget.AppCompatButton>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnFav"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:text="Favourite"
-            android:background="@drawable/custom_button"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="1dp">
-
-        </androidx.appcompat.widget.AppCompatButton>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/custom_button"
-            android:text="History"
-            android:textColor="@color/white"
-            android:textStyle="bold">
-
-        </androidx.appcompat.widget.AppCompatButton>
+        </ImageView>
 
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-<!--    <EditText-->
+        <EditText
+            android:id="@id/txtUsername"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="0dp"
+            android:text="Search By Location">
+
+        </EditText>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="2dp"
+            android:layout_height="50dp">
+
+        </ImageView>
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCLocation"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Currunt Location"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="100dp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFav"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Favourite"
+        android:background="@drawable/custom_button"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="1dp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_button"
+        android:text="History"
+        android:textColor="@color/white"
+        android:textStyle="bold">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="280dp"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="459dp"-->
+<!--        android:layout_weight="7">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <EditText-->
+<!--                android:id="@id/txtUsername"-->
+<!--                android:layout_width="220dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="60dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:layout_marginEnd="0dp"-->
+<!--                android:text="View Reservation">-->
+
+<!--            </EditText>-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginStart="320dp"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:layout_marginEnd="2dp"-->
+<!--                android:src="@drawable/ic_search">-->
+
+<!--            </ImageView>-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btnCLocation"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:background="@drawable/custom_button"-->
+<!--            android:text="Search Reservation"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold">-->
+
+<!--        </androidx.appcompat.widget.AppCompatButton>-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btnFav"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:background="@drawable/custom_button"-->
+<!--            android:text="Favourite"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold">-->
+
+<!--        </androidx.appcompat.widget.AppCompatButton>-->
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btnHistory"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:background="@drawable/custom_button"-->
+<!--            android:text="History"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold">-->
+
+<!--        </androidx.appcompat.widget.AppCompatButton>-->
+
+<!--    </LinearLayout>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/parking_img"-->
+<!--        tools:layout_editor_absoluteX="-16dp"-->
+<!--        tools:layout_editor_absoluteY="76dp">-->
+
+<!--    </ImageView>-->
+
+
+    <!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/navigationView"-->
+<!--        app:headerLayout="@layout/header_menu"-->
+<!--        app:menu="@menu/main_menu_parking"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        android:layout_gravity="start">-->
+
+<!--    </com.google.android.material.navigation.NavigationView>-->
+
+
+    <!--    <EditText-->
 <!--        android:id="@id/txtUsername"-->
 <!--        android:layout_width="220dp"-->
 <!--        android:layout_height="wrap_content"-->
@@ -288,4 +364,4 @@
 
 <!--    </RelativeLayout>-->
 
-</androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

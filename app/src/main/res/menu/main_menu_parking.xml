@@ -1,56 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <group
-        android:checkableBehavior="single">
+    <item
+        app:showAsAction="always"
+        android:title=""
+        android:icon="@drawable/ic_baseline_signout"
+        android:id="@+id/signout">
+    </item>
 
-<!--        <item-->
-<!--            android:id="@+id/nav_park"-->
-<!--            android:title="Parking"-->
-<!--            android:icon="@drawable/ic_baseline_my_parking"/>-->
+    <item
+        app:showAsAction="always"
+        android:title=""
+        android:icon="@drawable/three_dot">
+        <menu>
+            <item android:id="@+id/reservations"
+                android:icon="@drawable/ic_baseline_reservations"
+                android:title="My Reservations"
+                app:showAsAction="never"/>
 
-        <item
-            android:id="@+id/nav_acc"
-            android:title="My Accounts"
-            android:icon="@drawable/ic_baseline_accounts_settings"/>
+            <item android:id="@+id/favorites"
+                android:icon="@drawable/ic_baseline_favorite"
+                android:title="My Favorites"
+                app:showAsAction="never"/>
 
-        <item
-            android:id="@+id/nav_fav"
-            android:title="Favorites"
-            android:icon="@drawable/ic_baseline_favorite"/>
+            <item android:id="@+id/payments"
+                android:icon="@drawable/ic_baseline_payments"
+                android:title="My Payments"
+                app:showAsAction="never"/>
 
-        <item
-            android:id="@+id/nav_pay"
-            android:title="Payments"
-            android:icon="@drawable/ic_baseline_payments"/>
+            <item android:id="@+id/account"
+                android:icon="@drawable/ic_baseline_accounts_settings"
+                android:title="My Account"
+                app:showAsAction="never"/>
 
-        <item
-            android:id="@+id/nav_about"
-            android:title="About"
-            android:icon="@drawable/ic_baseline_about"/>
-
-    </group>
-
-    <group
-        android:checkableBehavior="single">
-        <item android:title="Authenticate">
-
-            <menu>
-
-                <group>
-                    <item
-                        android:id="@+id/nav_logout"
-                        android:title="Log Out"
-                        android:icon="@drawable/ic_baseline_signout"/>
-                </group>
-
-
-            </menu>
-
-        </item>
-
-    </group>
-
-
+            <item android:id="@+id/about"
+                android:icon="@drawable/ic_baseline_about"
+                android:title="About"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
 
 </menu>
