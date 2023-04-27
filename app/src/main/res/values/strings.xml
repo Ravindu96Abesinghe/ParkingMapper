@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Parking Mapper</string>
-<!--    <string name="title_activity_maps">MapsActivity</string>-->
+    <!--    <string name="title_activity_maps">MapsActivity</string>-->
     <string name="menu_open">Open</string>
     <string name="menu_close">Close</string>
+    <string name="title_activity_curent_maps">CurentMapsActivity</string>
 </resources>

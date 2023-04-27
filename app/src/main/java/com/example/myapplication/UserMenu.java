@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +28,7 @@ public class UserMenu extends AppCompatActivity implements PaymentResultListener
         setContentView(R.layout.activity_user_menu);
 
         final Button btnpayment = (Button) findViewById(R.id.btnHistory);
+        final Button btncloc = (Button) findViewById(R.id.btnCLocation);
 
         Checkout.preload(getApplicationContext());
 
@@ -34,6 +36,15 @@ public class UserMenu extends AppCompatActivity implements PaymentResultListener
             @Override
             public void onClick(View v) {
                 startPayement();
+            }
+        });
+
+        btncloc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // open register activity
+                startActivity(new Intent(UserMenu.this, CurentMapsActivity.class));
             }
         });
 
@@ -97,4 +108,6 @@ public class UserMenu extends AppCompatActivity implements PaymentResultListener
     public void onPaymentError(int i, String s) {
         Log.d("ONERROR", "onPaymentError: "+s);
     }
+
+
 }
