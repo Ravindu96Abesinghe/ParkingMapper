@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    tools:context=".About_us">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="        A vehicle parking app in Sri Lanka is a mobile application that helps drivers find and reserve available parking spaces in major cities. The app uses location-based services to provide users with real-time information on parking availability, rates, and directions to the nearest parking spot. Users can easily search and filter results based on their preferences and needs, reserve spots, and make secure mobile payments. The app could also offer additional features such as traffic information and parking regulations to help users navigate Sri Lanka's urban landscape. Partnering with local parking providers and businesses and offering multilingual support can help ensure the app's success."
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gmail Address  - "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="parkingmapper@gmail.com"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Number  - "
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0742389051"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp">
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>
