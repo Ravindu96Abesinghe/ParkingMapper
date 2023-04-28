@@ -44,7 +44,7 @@ public class UserMenu extends AppCompatActivity implements PaymentResultListener
             public void onClick(View v) {
 
                 // open register activity
-                startActivity(new Intent(UserMenu.this, CurentMapsActivity.class));
+                startActivity(new Intent(UserMenu.this, CurruntMap.class));
             }
         });
 
