@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="7">
+        android:layout_weight="11">
 
         <ImageView
             android:layout_width="match_parent"
@@ -25,41 +25,13 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@id/txtUsername"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="0dp"
-            android:text="Search By Location">
-
-        </EditText>
-
-        <ImageView
-            android:layout_width="50dp"
-            android:src="@drawable/ic_search"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="2dp"
-            android:layout_height="50dp">
-
-        </ImageView>
-
-
-    </RelativeLayout>
-
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnCLocation"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Currunt Location"
+        android:text="Reservations"
         android:background="@drawable/custom_button"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -73,7 +45,7 @@
         android:id="@+id/btnFav"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:text="Favourite"
+        android:text="Parking Location"
         android:background="@drawable/custom_button"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"

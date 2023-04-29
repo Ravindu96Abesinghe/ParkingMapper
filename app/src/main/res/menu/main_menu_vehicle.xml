@@ -24,11 +24,6 @@
                 android:title="My Favorites"
                 app:showAsAction="never"/>
 
-            <item android:id="@+id/payments"
-                android:icon="@drawable/ic_baseline_payments"
-                android:title="My Payments"
-                app:showAsAction="never"/>
-
             <item android:id="@+id/account"
                 android:icon="@drawable/ic_baseline_accounts_settings"
                 android:title="My Account"
@@ -36,7 +31,7 @@
 
             <item android:id="@+id/about"
                 android:icon="@drawable/ic_baseline_about"
-                android:title="About"
+                android:title="About Us"
                 app:showAsAction="never"/>
         </menu>
     </item>

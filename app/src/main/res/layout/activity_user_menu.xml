@@ -88,7 +88,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/custom_button"
-        android:text="Payment"
+        android:text="History"
         android:textColor="@color/white"
         android:textStyle="bold">
 
