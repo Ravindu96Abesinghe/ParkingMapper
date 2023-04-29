@@ -47,7 +47,24 @@
 <!--                android:value="" />-->
 <!--        </activity>-->
         <activity
-            android:name=".CurentMapsActivity"
+            android:name=".CurentMapsActivity"/>
+
+        <activity
+            android:name=".ReservationsVehicle"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".About_us"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".VehicleSettings"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -78,13 +95,6 @@
 <!--        </activity>-->
         <activity
             android:name=".AccountsParking"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".AccountSettings"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

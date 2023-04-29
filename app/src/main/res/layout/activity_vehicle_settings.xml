@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".AccountsParking">
+    tools:context=".VehicleSettings">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Register Your Parking"
+            android:text="Register Your Vehicle"
             android:textSize="20dp"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -27,7 +26,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="User Name"
+            android:text="Vehicle Number"
             android:layout_marginTop="20dp">
 
         </TextView>
@@ -35,43 +34,10 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtParkName">
+            android:id="@+id/txtVehicleNum"
+            android:hint=" wp ABC-0000">
 
         </EditText>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Parking Location">
-
-        </TextView>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtParkLocation"
-                android:hint="Enter your parking address">
-
-            </EditText>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtSetMap"
-                android:layout_marginStart="5dp"
-                android:textColor="@color/btnLogin"
-                android:text="Set on your map"
-                android:layout_marginLeft="30dp"
-                android:textStyle="bold">
-
-            </TextView>
-
-        </LinearLayout>
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,14 +48,14 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtContactNum">
+            android:id="@+id/txtVContactNumber">
 
         </EditText>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Parking Type">
+            android:text="Vehicle Type">
 
         </TextView>
 
@@ -100,83 +66,48 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="10dp">
 
-            <RadioButton android:id="@+id/radio_mini"
+            <RadioButton android:id="@+id/radio_bike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mini"
+                android:text="Bike"
                 />
-            <RadioButton android:id="@+id/radio_medium"
+            <RadioButton android:id="@+id/radio_car"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Medium"
+                android:text="Car"
                 />
-            <RadioButton android:id="@+id/radio_large"
+
+            <RadioButton android:id="@+id/radio_threeweel"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:text="three weel"
+                />
+            <RadioButton android:id="@+id/radio_van"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Large"
+                android:text="Van"
+                />
+            <RadioButton android:id="@+id/radio_bus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bus"
+                />
+            <RadioButton android:id="@+id/radio_lorry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorry"
                 />
         </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Parking Lots">
-
-        </TextView>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtparkingLots"
-            android:hint="Number of parking lots">
-
-        </EditText>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Opening Time"
-                android:layout_marginRight="20dp">
-
-            </TextView>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtOpenTime"
-                android:text="08:00">
-
-            </EditText>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textStyle="bold">
-
-            </TextView>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtCloseTime"
-                android:text="20:00">
-
-            </EditText>
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="30dp">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="100dp"

@@ -19,6 +19,11 @@
                 android:title="My Reservations"
                 app:showAsAction="never"/>
 
+            <item android:id="@+id/favorites"
+                android:icon="@drawable/ic_baseline_favorite"
+                android:title="My Favorites"
+                app:showAsAction="never"/>
+
             <item android:id="@+id/account"
                 android:icon="@drawable/ic_baseline_accounts_settings"
                 android:title="My Account"
